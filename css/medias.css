@@ -1,0 +1,27 @@
+@media screen and (min-width:770px) {
+    .topo span{
+        display: none;
+    }
+    .topo .links{
+        background-color: transparent;
+        position: absolute;
+        right: 10px;
+        top: 35px;
+        display: block;
+    }
+    .links a{
+        display: inline;
+        color: black;
+        margin: 0 10px ;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none; 
+        border: none;
+    }
+    .pag2 .links a{
+        color: white;
+    }
+    .pag2 .links a:hover{
+        color: var(--cor_anuncio);
+    }
+}
