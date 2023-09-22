@@ -15,53 +15,47 @@
 /*Cabeçalho*/
 .header{
     width: 100%;
-    padding: 15px 0;
+    padding: 15px 0px;
 }
-.header .topo, .footer{
-    margin: 0 auto;
+.header .topo{
     max-width: 1024px;
-    position: relative;
+    padding:10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.topo .logo-texto{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.logo-texto div{
+    margin-left: 10px;
 }
 .topo img.logo, .footer img.logo{
     width: 80px;
     margin: 7px 0px 0px 15px ;
 }
-.topo h1{
-    position: absolute;
-    top: 10px;
-    left: 110px;
-}
-.topo p{
-    position: absolute;
-    top: 60px;
-    left: 110px;
-    color: var(--cor_banner);
-}
-.topo span{
-    position: absolute;
+/*.topo span{
     font-size: 38px;
     top: 29px;
     right: 15px;
     cursor: pointer;
     color: var(--cor_anuncio);
-}
+}*/
 .topo .links{
-    position: absolute;
-    right: 49.5px;
-    top: 46px;
-    background-color: var(--cor_anuncio);
-    border-radius: 7px 0px 7px 7px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .links a{
-    padding: 5px 7px;
-    border-bottom: 1px solid;
-    display: block;
-    color: white;
-    margin: 0 10px ;
-    font-size: 13px;
+    color: var(--cor_anuncio);
+    margin: 0px 10px;
+    text-decoration: none;
     font-weight: 600;
-    text-decoration: none; 
 }
 .links a:hover{
     color: var(--cor_banner);
@@ -224,6 +218,8 @@ div.an-2{
     text-align: center;
 }
 .footer{
+    margin: 0 auto;
+    max-width: 1024px;
     padding: 20px;
     margin-bottom: 30px;
 }
@@ -248,8 +244,13 @@ div.an-2{
 .pag2{
     background-color: var(--cor_banner);
 }
-.pag2 p, .links a{
+.pag2 p, .pag2 .links a{
     color: white;
+    font-weight: 600;
+}
+.pag2 .links a:hover{
+    color: var(--cor_anuncio);
+    
 }
 /*Corpo/ Tabela*/
 #precos{
