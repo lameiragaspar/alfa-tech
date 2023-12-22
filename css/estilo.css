@@ -6,6 +6,11 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
+.tam-max{
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 20px;
+}
 /*Variáveis*/
 :root{
     --cor_banner :#2F86D6;
@@ -22,7 +27,7 @@
     padding:10px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -71,11 +76,16 @@
     max-width: 1024px;
     padding: 20px 0px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .tam-max .txt-banner{
     color: white;
-    padding: 90px 50px 10px 20px;
-    max-width: 470px;
+    padding: 20px 50px 20px 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .txt-banner p{
     font-size:14px;
@@ -85,40 +95,41 @@
     font-size: 24px;
     margin: 7px 0;
 }
-.tam-max img{
-    width: 45%;
-    margin: auto ;
+.banner .tam-max .img-capa{
+    width: 48%;
+}
+.banner .tam-max img{
+    width: 100%;
+    margin:auto;
 }
 /*Anúncio 1 (Segunda div do corpo)*/
 .anuncio{
     background-color: var(--cor_anuncio);
-    color: white;
-    padding: 30px 0;
+    padding: 20px 0;
 }
-.anuncio h3, .anuncio p{
-    max-width: 50%;
-}
-.limite{
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 2px 20px 3px 20px;
-    position: relative;
+.anuncio .tam-max{
+    padding: 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px;
     /*background-color: aqua;*/
 }
-
-.limite p{
+.anuncio .tam-max div:first-child{
+    color: #fff;
+    max-width: 500px;
+}
+.anuncio .tam-max p{
     font-size: 13px;
 }
-.anuncio a{
+.anuncio .tam-max a{
     font-size: 13px;
     font-weight: bold;
     background-color: var(--cor_banner);
     padding: 15px;
     color: white;
     text-decoration: none;
-    position: absolute;
-    right: 20px;
-    top: 1.6px;
     border-radius: 4px;
 }
 a img{
@@ -138,20 +149,26 @@ a img{
     color: var(--cor_banner);
 }
 #informacoes .fotos{
-    margin:0px auto;
-    display: flex;
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    gap: 5px;
     width: 100%;
 }
 .fotos div{
-    margin: 0px 1px;
-    margin-bottom:100px;
     text-align: center;
+    height: 200px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
-
-.fotos img{
-    
-    max-width: calc((100% / 4));
-    margin: 0px 30%;
+.fotos img{   
+    max-width: 70px;
 }
 .fotos h3{
     font-size: 18px;
@@ -163,14 +180,18 @@ a img{
     text-align: center;
     background-color: var(--cor_tab);
 }
-#planos .limite table{
+#planos .tam-max{
+    overflow: auto;
+}
+#planos .tam-max table{
     width: 100%;
+    overflow: auto;
 }
 table.planos{
     margin: 50px 0 70px;
     box-shadow: 0px 0px 30px 5px #2F86D6;
 }
-table.planos tr th td{
+table.planos thead tr th td{
     border: 1px solid #eeeff3;
     border-collapse: collapse;
     border-radius: 5px;
@@ -183,7 +204,7 @@ table.planos thead th{
     width: calc(100% / 4);
 }
 table.planos thead th img{
-    padding: 10px;
+    padding: 0 10px;
     width:calc(100% / 2.5); 
 }
 table.planos th img.pequenas{
